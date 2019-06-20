@@ -32,7 +32,7 @@
     |:-----|:-----|:---|:----------|:----------|
     |1|0|sid|u2|Session id|
     |2|2|Reserved|u2|default is 1. if both field 1 & 2 are 0, means connect|
-    |3|4|payload|raw|Encrypted data, to the end of current package. For connecting, encrypt via pre-shared key|
+    |3|4|payload|raw|Encrypted data, to the end of current package. For connecting, encrypt via public server key|
 
 2. Connect Request payload
 
@@ -43,13 +43,14 @@
     |2|len(uname) + 1|s_uname|tiny_array|Encrypted user name, with user key|
     |3|off_end(2)|ticket|u8|random ticket|
 
-3. Connect Response ayload
+    Master should bookkeeping the failed connection 
+
+3. Connect Response payload
 
     Field sid and Reserved must be 0 for connect response. The payload, except ticket should be encrypted by user key.
     |order|offset|name|type|description|
     |:-----|:-----|:---|:----------|:----------|
     |1|0|ticket|u8|random ticket, sent by previous connect request|
     |2|8|sid|u2|New session id, not 0|
-    |3|endof(4)|skey|u32|Session Key for AES 256|
-    |4|10|cend|tiny_array|List of control endpoints|
-    |5|endof(3)|dend|tiny_array|List of data endpoints|
+    |3|16|skey|u32|Session Key for AES 256|
+    |4|48|cend|tiny_array|List of endpoints|
