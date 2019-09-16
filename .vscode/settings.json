@@ -1,0 +1,23 @@
+{
+    "cmake.configureOnOpen": true,
+    "cmake.buildBeforeRun":true,
+    "cmake.sourceDirectory": "${workspaceRoot}",
+    "cmake.buildDirectory": "${workspaceRoot}/build.dir/${buildType}",
+   
+    "clang.cxxflags": [
+        "-std=c++17",
+        "-Wall"
+    ],
+    "clang.completion.enable": true,
+
+    "cmake.generator": "Unix Makefiles",
+    "files.associations": {
+        "*.ipp": "cpp"
+    },
+    "clangd.arguments": [
+        "-background-index",
+        "-index",
+        "-j=4",
+        "-all-scopes-completion=false"
+    ]
+}
