@@ -4,9 +4,9 @@
 # error double inclusion of header udpdrop/config/abi_prefix.hpp is an error
 #endif
 
-#include <udpdrop/config.h>
+#include <udpdrop/config.hpp>
 
-#ifdef UD_H__AS_ABI_H__EADERS
+#ifdef UD_HAS_ABI_HEADERS
 #  include UD_ABI_PREFIX
 #endif
 

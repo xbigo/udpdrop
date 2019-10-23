@@ -8,7 +8,7 @@
     Either IPv4 or IPv6 address.
 
 - Port
-    UDP port
+    UDP or TCP port
 
 - Endpoint
     Pair of address and port
@@ -43,7 +43,7 @@
     |2|len(uname) + 1|s_uname|tiny_array|Encrypted user name, with user key|
     |3|off_end(2)|ticket|u8|random ticket|
 
-    Master should bookkeeping the failed connection 
+    Master should bookkeeping the failed connection
 
 3. Connect Response payload
 

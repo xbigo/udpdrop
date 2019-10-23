@@ -4,7 +4,7 @@
 #undef UD_ABI_PREFIX_H__
 #endif
 
-#ifdef UD_H__AS_ABI_H__EADERS
+#ifdef UD_HAS_ABI_HEADERS
 #  include UD_ABI_SUFFIX
 #endif
 

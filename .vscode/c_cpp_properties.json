@@ -4,7 +4,8 @@
             "name": "Linux",
             "includePath": [
                 "/usr/include/c++/8/**",
-                "${workspaceFolder}/include/**"
+                "${workspaceFolder}/include/**",
+                "${workspaceFolder}/include"
             ],
             "defines": [],
             "compilerPath": "/usr/bin/g++",
@@ -12,7 +13,7 @@
             "cppStandard": "c++17",
             "intelliSenseMode": "gcc-x64",
             "configurationProvider": "vector-of-bool.cmake-tools",
-            "compileCommands": "${workspaceFolder}/build.dir/debug/compile_commands.json"
+            "compileCommands": "${workspaceFolder}/build.dir/${buildType}/compile_commands.json"
         }
     ],
     "version": 4

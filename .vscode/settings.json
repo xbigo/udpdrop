@@ -1,8 +1,8 @@
 {
     "cmake.configureOnOpen": true,
     "cmake.buildBeforeRun":true,
-    "cmake.sourceDirectory": "${workspaceRoot}",
-    "cmake.buildDirectory": "${workspaceRoot}/build.dir/${buildType}",
+    "cmake.sourceDirectory": "${workspaceFolder}",
+    "cmake.buildDirectory": "${workspaceFolder}/build.dir/${buildType}",
    
     "clang.cxxflags": [
         "-std=c++17",
@@ -19,5 +19,8 @@
         "-index",
         "-j=4",
         "-all-scopes-completion=false"
-    ]
+    ],
+    "files.exclude": {
+        "**/.clangd/index": true
+    }
 }
